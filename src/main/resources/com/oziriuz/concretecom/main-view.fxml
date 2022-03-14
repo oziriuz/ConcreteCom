@@ -400,7 +400,7 @@
                                     <Label text="Code" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="857.0" text="Recipes" GridPane.columnIndex="1" GridPane.columnSpan="13" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                        <font>
-                                          <Font size="24.0" />
+                                          <Font name="System Bold" size="24.0" />
                                        </font>
                                     </Label>
                                     <TextField editable="false" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
