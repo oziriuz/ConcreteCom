@@ -23,8 +23,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1100.0" prefHeight="720.0"
-            prefWidth="1100.0" stylesheets="@dark-theme.css" xmlns="http://javafx.com/javafx/17">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1100.0" prefHeight="720.0" prefWidth="1100.0" stylesheets="@dark-theme.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <AnchorPane prefHeight="850.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -509,19 +508,77 @@
                            <children>
                               <GridPane layoutX="254.0" layoutY="135.0" prefHeight="113.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                    <RowConstraints fillHeight="false" maxHeight="0.0" minHeight="30.0" percentHeight="0.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" maxHeight="10.0" minHeight="10.0" percentHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" maxHeight="35.0" minHeight="35.0" percentHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="896.0" text="Clients" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Code" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                    <Label text="Company" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Label text="VAT" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <Label text="Contact" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                                    <Label text="Address" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                                    <Label text="Phone Nr." GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                                    <Button maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" prefWidth="120.0" text="VAT Check" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Delete" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Hide" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Clear" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Add" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Delete" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Settings" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.columnSpan="4" GridPane.rowIndex="3" GridPane.rowSpan="5">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                      </columns>
+                                       <GridPane.margin>
+                                          <Insets bottom="2.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                    <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="9">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                      </columns>
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="370.0" text="Worksites" GridPane.columnIndex="6" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
                               </GridPane>
                            </children></AnchorPane>
                     </content>
@@ -530,16 +587,67 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <GridPane layoutX="115.0" layoutY="123.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
+                              <GridPane prefHeight="113.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints fillHeight="false" maxHeight="10.0" minHeight="10.0" percentHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" maxHeight="35.0" minHeight="35.0" percentHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="896.0" text="Drivers" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Code" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                    <Label text="Name" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Label text="Notes" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                                    <Label text="Phone Nr." GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                    <TextField GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Delete" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Hide" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Clear" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="9">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="C1" />
+                                          <TableColumn prefWidth="75.0" text="C2" />
+                                       </columns>
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                    <Label text="Vehicle Nr." GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                    <Label text="Vehicle Model" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                    <Label text="Vehicle Capacity" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="6" />
+                                 </children>
                               </GridPane>
                            </children></AnchorPane>
                     </content>
@@ -548,16 +656,68 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <GridPane layoutX="47.0" layoutY="29.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
+                              <GridPane prefHeight="113.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints fillHeight="false" maxHeight="10.0" minHeight="10.0" percentHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" maxHeight="35.0" minHeight="35.0" percentHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="896.0" text="Suppliers" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Code" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                    <Label text="Company" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Label text="VAT" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <Label text="Contact" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                    <Label text="Address" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Label text="Phone Nr." GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                    <TextField GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <Button maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" prefWidth="120.0" text="VAT Check" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Delete" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Hide" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Clear" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="9">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="C1" />
+                                          <TableColumn prefWidth="75.0" text="C2" />
+                                       </columns>
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                    <Label text="Notes" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="6" />
+                                 </children>
                               </GridPane>
                            </children></AnchorPane>
                     </content>
@@ -566,34 +726,146 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <GridPane layoutX="77.0" layoutY="66.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
+                              <GridPane prefHeight="113.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints fillHeight="false" maxHeight="10.0" minHeight="10.0" percentHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" maxHeight="35.0" minHeight="35.0" percentHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="896.0" text="Materials" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Code" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                    <Label text="Name" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Label text="Type" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Delete" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Delivery" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Clear" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="9">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="C1" />
+                                          <TableColumn prefWidth="75.0" text="C2" />
+                                       </columns>
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                    <Label text="Material" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <CheckBox mnemonicParsing="false" text="F1" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <CheckBox mnemonicParsing="false" text="F2" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                    <CheckBox mnemonicParsing="false" text="F3" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                    <CheckBox mnemonicParsing="false" text="F4" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                                    <CheckBox mnemonicParsing="false" text="F5" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                    <CheckBox mnemonicParsing="false" text="F6" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Sale" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                    <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" prefWidth="80.0" text="Revision" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                 </children>
                               </GridPane>
                            </children></AnchorPane>
                     </content>
                   </Tab>
-                  <Tab text="Notes">
+                  <Tab text="Documents">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <GridPane layoutX="106.0" layoutY="43.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
+                              <GridPane prefHeight="113.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="20.0" prefWidth="20.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="20.0" prefWidth="20.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints fillHeight="false" maxHeight="10.0" minHeight="10.0" percentHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" maxHeight="35.0" minHeight="35.0" percentHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="896.0" text="Documents" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Expedition Nr." GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                    <Label text="Expedition Date" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Label text="Company" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <Label text="Recipe Code" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                    <Label text="Recipe Name" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Label text="Recipe Class" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="9">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="C1" />
+                                          <TableColumn prefWidth="75.0" text="C2" />
+                                       </columns>
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                    <Label text="Worksite" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label text="Driver Code" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                    <Label text="Driver Name" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                    <Label text="Vehicle Nr." GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                    <Spinner GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                                    <DatePicker GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <Label text="Dispatcher" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                                    <ComboBox prefWidth="150.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                                    <Button mnemonicParsing="false" text="Clear Filters" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                    <Button mnemonicParsing="false" text="Form 2" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button mnemonicParsing="false" text="Form 1" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Button mnemonicParsing="false" text="Form 3" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Label text="Note Forms" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+                                 </children>
                               </GridPane>
                            </children></AnchorPane>
                     </content>
@@ -612,6 +884,346 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
+                              </GridPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="PLC DATA">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                  <RowConstraints />
+                                  <RowConstraints />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="16" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="8" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="12" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="13" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="14" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="9" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="10" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="16" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="15" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="20" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="20" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="20" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="20" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="24" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="25" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="26" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="27" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="28" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="29" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="24" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="25" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="26" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="27" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="24" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="25" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="24" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="25" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="26" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="27" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="28" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="29" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.columnSpan="2" GridPane.rowIndex="24" />
+                                    <TextField alignment="CENTER_RIGHT" promptText="699" GridPane.columnIndex="12" GridPane.rowIndex="26" />
+                                    <TextField alignment="CENTER_RIGHT" promptText="12100" GridPane.columnIndex="12" GridPane.rowIndex="27" />
+                                    <TextField alignment="CENTER_RIGHT" promptText="12105" GridPane.columnIndex="12" GridPane.rowIndex="28" />
+                                    <TextField alignment="CENTER_RIGHT" promptText="698" GridPane.columnIndex="13" GridPane.rowIndex="26" />
+                                    <TextField alignment="CENTER_RIGHT" promptText="12104" GridPane.columnIndex="13" GridPane.rowIndex="27" />
+                                    <TextField alignment="CENTER_RIGHT" promptText="12106" GridPane.columnIndex="13" GridPane.rowIndex="28" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="28" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="27" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="26" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="17" GridPane.rowIndex="25" />
+                                    <Label text="dm4" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="28" />
+                                    <Label text="dm3" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="27" />
+                                    <Label text="dm2" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
+                                    <Label text="dm1" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
+                                    <Label text="mix time" GridPane.columnIndex="11" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
+                                    <Label text="number of agg" GridPane.columnIndex="10" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="27" />
+                                    <Label text="number of silos" GridPane.columnIndex="10" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="28" />
+                                    <Label text="open time" GridPane.columnIndex="14" GridPane.columnSpan="2" GridPane.rowIndex="26" />
+                                    <Label text="number of waters" GridPane.columnIndex="14" GridPane.columnSpan="2" GridPane.rowIndex="27" />
+                                    <Label text="number of adds" GridPane.columnIndex="14" GridPane.columnSpan="2" GridPane.rowIndex="28" />
+                                    <Label text="mixer capacity" GridPane.columnIndex="12" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="23" />
+                                    <Label alignment="CENTER" text="aggr" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="23" />
+                                    <Label alignment="CENTER" text="cement" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="23" />
+                                    <Label alignment="CENTER" text="water" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="23" />
+                                    <Label alignment="CENTER" text="adds" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="23" />
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="417.0" text="identificators" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.rowIndex="22" />
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="351.0" text="machine settings" GridPane.columnIndex="10" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.rowIndex="22" />
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="480.0" text="scales online raw data" GridPane.columnIndex="4" GridPane.columnSpan="7" GridPane.halignment="CENTER" GridPane.rowIndex="20" />
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="807.0" text="machine status" GridPane.columnIndex="2" GridPane.columnSpan="15" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="405.0" text="recipe sending to plc" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="454.0" text="results recieving from plc" GridPane.columnIndex="10" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                    <Label text="ready" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="14" />
+                                    <Label alignment="CENTER" text="aggr" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="19" />
+                                    <Label alignment="CENTER" text="cement" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="19" />
+                                    <Label alignment="CENTER" text="water" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="19" />
+                                    <Label alignment="CENTER" text="adds" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="19" />
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.rowSpan="12" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="17" GridPane.rowIndex="5" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="17" GridPane.rowIndex="18" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="17" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="17" GridPane.rowIndex="21" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="17" GridPane.rowIndex="30" />
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="29" />
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="29" />
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.rowSpan="8" />
+                                    <Label text="0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Label text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                                    <Label text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                                    <Label text="3" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                                    <Label text="4" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+                                    <Label text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" />
+                                    <Label text="6" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14" />
+                                    <Label text="7" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="15" />
+                                    <Label text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
+                                    <Label text="9" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="8" GridPane.rowIndex="11" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="11" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="12" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="13" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="14" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="15" GridPane.rowIndex="17" />
+                                    <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="16" GridPane.rowIndex="9" />
+                                    <Label text="0" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                    <Label text="1" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                                    <Label text="2" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                                    <Label text="3" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                                    <Label text="4" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+                                    <Label text="5" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="13" />
+                                    <Label text="6" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="14" />
+                                    <Label text="7" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="15" />
+                                    <Label text="8" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
+                                    <Label text="9" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="17" />
+                                    <Label text="0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="1" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="2" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="3" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="4" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="5" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="6" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="1" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="2" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="3" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="4" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="5" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="8" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label text="dm500" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="15" />
+                                    <Label text="dm501" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="16" />
+                                    <Label text="dm1071" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="dm1070" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="3333" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="cio1000" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="cio1002" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="cio1003" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="mixer" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                    <Label text="aggr" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                    <Label text="cement" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                    <Label text="cio1004" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="water" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                    <Label text="cio1005" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="sent by pc" GridPane.columnIndex="16" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                    <Label text="cio1001" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="adds" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                    <Label text="dm84" GridPane.columnIndex="11" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
+                                    <Label text="dm11" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
+                                    <Label text="dm12" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
+                                    <Label text="dm13" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
+                                    <Label text="dm14" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="27" />
+                                    <Label text="dm15" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="28" />
+                                    <Label text="dm16" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="29" />
+                                    <Label text="dm31" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
+                                    <Label text="dm32" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
+                                    <Label text="dm33" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
+                                    <Label text="dm34" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="27" />
+                                    <Label text="dm21" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
+                                    <Label text="dm41" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
+                                    <Label text="dm22" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
+                                    <Label text="dm42" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
+                                    <Label text="dm43" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
+                                    <Label text="dm44" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="27" />
+                                    <Label text="dm45" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="28" />
+                                    <Label text="dm46" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="29" />
+                                    <Label text="PLC DATA" GridPane.columnIndex="1" GridPane.columnSpan="17" GridPane.halignment="CENTER" GridPane.rowIndex="31">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
                               </GridPane>
                            </children></AnchorPane>
                     </content>
