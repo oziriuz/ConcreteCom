@@ -2,6 +2,7 @@ module com.oziriuz.concretecom {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
+    requires org.postgresql.jdbc;
 
     opens com.oziriuz.concretecom to javafx.fxml;
     exports com.oziriuz.concretecom;
