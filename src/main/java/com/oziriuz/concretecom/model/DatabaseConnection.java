@@ -3,23 +3,29 @@ package com.oziriuz.concretecom.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
 
 public class DatabaseConnection {
-    public Connection databaseLink;
+    private static Connection connection;
+    private static final String connectionString = "jdbc:postgresql://localhost/";
 
-    public Connection getConnection() {
+    private DatabaseConnection() {
+    }
+
+    private static void createConnection() throws SQLException {
+        Properties properties = new Properties();
+        properties.setProperty("user", "postgres");
+        properties.setProperty("password", "1234");
         String databaseName = "postgres";
-        String databaseUser = "postgres";
-        String databasePassword = "1234";
-        String url = "jdbc:postgresql://localhost/" + databaseName;
 
-        try {
-            Class.forName("org.postgresql.Driver");
-            databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);
+        connection = DriverManager.getConnection(connectionString + databaseName, properties);
+    }
 
-        } catch (Exception e) {
-            e.printStackTrace();
+    public static Connection getConnection() throws SQLException {
+        if (connection == null) {
+            createConnection();
         }
-        return databaseLink;
+        return connection;
     }
 }

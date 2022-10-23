@@ -1,8 +1,9 @@
 module com.oziriuz.concretecom {
-    requires javafx.controls;
-    requires javafx.fxml;
     requires java.sql;
-    requires org.postgresql.jdbc;
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires javafx.controls;
+    requires java.persistence;
 
     opens com.oziriuz.concretecom to javafx.fxml;
     exports com.oziriuz.concretecom;

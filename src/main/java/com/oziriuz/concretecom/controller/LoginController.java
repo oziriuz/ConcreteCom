@@ -2,6 +2,7 @@ package com.oziriuz.concretecom.controller;
 
 import com.oziriuz.concretecom.Launcher;
 import com.oziriuz.concretecom.model.LoginValidation;
+import com.oziriuz.concretecom.model.Operator;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,6 +12,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.io.IOException;
 
 public class LoginController {
@@ -27,13 +31,10 @@ public class LoginController {
     private PasswordField passwordPasswordField;
 
     public void loginButtonOnClick() {
-
         if (!usernameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
-
             if (LoginValidation.isValidLogin(usernameTextField.getText(), passwordPasswordField.getText())) {
                 try {
                     loadMainWindow();
-                    //TODO: check if it is ok to close the stage by using the cancel method!
                     cancelButtonOnClick();
                 } catch (IOException e) {
                     //TODO: proper exception handling
@@ -45,10 +46,15 @@ public class LoginController {
         } else {
             loginMessageLabel.setText("Please enter username and password.");
         }
+//        EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
+//        EntityManager em = emf.createEntityManager();
+//        em.getTransaction().begin();
+//        Operator operator = new Operator("test777", "y");
+//        em.persist(operator);
+//        em.getTransaction().commit();
     }
 
     public void cancelButtonOnClick() {
-
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
@@ -60,5 +66,7 @@ public class LoginController {
         primaryStage.setTitle("ConcreteCom");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+
     }
 }
