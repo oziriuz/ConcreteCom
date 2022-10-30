@@ -1,10 +1,10 @@
 package com.oziriuz.concretecom.controller;
 
 import com.oziriuz.concretecom.model.orm.DatabaseManager;
+
 import javafx.application.Platform;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
