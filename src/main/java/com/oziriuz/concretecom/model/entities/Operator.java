@@ -1,17 +1,21 @@
 package com.oziriuz.concretecom.model.entities;
 
-//@Entity
-//@Table(name = "oper_data")
+import com.oziriuz.concretecom.model.annotations.Column;
+import com.oziriuz.concretecom.model.annotations.Table;
+import com.oziriuz.concretecom.model.annotations.Id;
+
+@Table("oper_data")
+//@Table
 public class Operator {
-    //@Id
+    @Id
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Column(name = "o_num" )
+    @Column("o_num" )
     private int id;
 
-    //@Column(name = "o_name", unique = true)
+    @Column("o_name")
     private String name;
 
-    //@Column(name = "o_pass")
+    @Column("o_pass")
     private String password;
 
     public Operator() {

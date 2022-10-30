@@ -56,5 +56,7 @@ public class LoginController {
         primaryStage.setTitle("ConcreteCom");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+
     }
 }

@@ -1,4 +1,4 @@
-package com.oziriuz.concretecom.model;
+package com.oziriuz.concretecom.model.orm;
 
 
 import java.sql.Connection;
