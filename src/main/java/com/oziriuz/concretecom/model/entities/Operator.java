@@ -1,10 +1,11 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.Column;
-import com.oziriuz.concretecom.model.annotations.Table;
+import com.oziriuz.concretecom.model.annotations.Entity;
 import com.oziriuz.concretecom.model.annotations.Id;
+import com.oziriuz.concretecom.model.annotations.Unique;
 
-@Table("oper_data")
+@Entity("oper_data")
 //@Table
 public class Operator {
     @Id
@@ -12,6 +13,7 @@ public class Operator {
     @Column("o_num" )
     private int id;
 
+    @Unique
     @Column("o_name")
     private String name;
 

@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 
 public interface DbContext<E> {
-    boolean persist(E entity) throws IllegalAccessException, SQLException;
+    boolean saveToDB(E entity) throws IllegalAccessException, SQLException;
 
     Iterable<E> find();
 

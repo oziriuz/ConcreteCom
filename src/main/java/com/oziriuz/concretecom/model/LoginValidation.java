@@ -9,11 +9,11 @@ import java.sql.*;
 
 public class LoginValidation {
     public static boolean isValidLogin(String username, String password) {
-        //TODO: table names and columns must not be hard-coded here
         //TODO: password must be encoded
         try {
             Connection connection = DatabaseConnection.getConnection();
             EntityManager<Operator> operatorEntityManager = new EntityManager<>(connection, Operator.class);
+            operatorEntityManager.ensureTableInDatabase();
             Operator operator = new Operator(username, password);
             Operator toLogIn = operatorEntityManager.FindEntityInTable(operator);
 
