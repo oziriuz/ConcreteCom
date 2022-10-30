@@ -5,24 +5,23 @@ import com.oziriuz.concretecom.model.annotations.Entity;
 import com.oziriuz.concretecom.model.annotations.Id;
 import com.oziriuz.concretecom.model.annotations.Unique;
 
-@Entity("oper_data")
-//@Table
-public class Operator{
+@Entity("admin_data")
+public class Administrator{
     @Id
-    @Column("o_num" )
+    @Column("a_num" )
     private long id;
 
     @Unique
-    @Column("o_name")
+    @Column("a_name")
     private String name;
 
-    @Column("o_pass")
+    @Column("a_pass")
     private String password;
 
-    public Operator() {
+    public Administrator() {
     }
 
-    public Operator(String name, String password) {
+    public Administrator(String name, String password) {
         this.name = name;
         this.password = password;
     }

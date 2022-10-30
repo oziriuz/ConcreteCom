@@ -1,10 +1,12 @@
 package com.oziriuz.concretecom.controller;
 
+import com.oziriuz.concretecom.model.orm.DatabaseManager;
 import javafx.application.Platform;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class LauncherPreloaderController implements Initializable {
@@ -18,36 +20,33 @@ public class LauncherPreloaderController implements Initializable {
     }
 
     public void checkSuccessfulStart() {
-
-        final String[] message = {""};
+        final String[] message = new String[5];
+        message[0] = "Verification ... Ensuring Database";
+        message[1] = "Second function";
+        int threadCounter;
         //TODO: this all must be in the model or not??
-        //TODO: initialize database connection
-        //TODO: check existence of tables
-        //TODO: create missing tables
-        //TODO: check existence of columns in tables
-        //TODO: create missing columns
         //TODO: initialize OPC connection
 
         Thread t1 = new Thread(() -> {
-            message[0] = "First function";
             Platform.runLater(() -> lblLoadingg.setText(message[0]));
             try {
-                Thread.sleep(555);
+                DatabaseManager.ensureDatabase();
+                Thread.sleep(333);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
         });
 
         Thread t2 = new Thread(() -> {
-            message[0] = "Second function";
-            Platform.runLater(() -> lblLoadingg.setText(message[0]));
+            Platform.runLater(() -> lblLoadingg.setText(message[1]));
             try {
-                Thread.sleep(555);
+                Thread.sleep(333);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         });
-
 
         try {
             t1.start();
@@ -57,7 +56,5 @@ public class LauncherPreloaderController implements Initializable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        //return message[0];
     }
 }

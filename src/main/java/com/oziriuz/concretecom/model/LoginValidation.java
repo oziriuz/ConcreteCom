@@ -13,9 +13,8 @@ public class LoginValidation {
         try {
             Connection connection = DatabaseConnection.getConnection();
             EntityManager<Operator> operatorEntityManager = new EntityManager<>(connection, Operator.class);
-            operatorEntityManager.ensureTableInDatabase();
             Operator operator = new Operator(username, password);
-            Operator toLogIn = operatorEntityManager.FindEntityInTable(operator);
+            Operator toLogIn = operatorEntityManager.FindOneEntity(operator);
 
             if (toLogIn != null) {
                 connection.close();
