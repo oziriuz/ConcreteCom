@@ -1,8 +1,6 @@
 package com.oziriuz.concretecom.model.entities;
 
-import com.oziriuz.concretecom.model.annotations.Column;
-import com.oziriuz.concretecom.model.annotations.Entity;
-import com.oziriuz.concretecom.model.annotations.Id;
+import com.oziriuz.concretecom.model.annotations.*;
 
 @Entity("worksites")
 public class Worksite {
