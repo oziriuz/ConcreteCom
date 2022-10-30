@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="remove hibernate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/annotations/Column.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/annotations/Id.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/annotations/Table.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DbContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/LoginValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/LoginValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Operator.java" afterDir="false" />
+    <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="custom orm">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +124,7 @@
       <workItem from="1666545574525" duration="756000" />
       <workItem from="1666546680101" duration="6618000" />
       <workItem from="1666554781564" duration="39000" />
-      <workItem from="1667046437183" duration="16461000" />
+      <workItem from="1667046437183" duration="18182000" />
     </task>
     <task id="LOCAL-00001" summary="concretecom">
       <created>1647283680003</created>
@@ -254,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667047824544</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="custom orm">
+      <created>1667111318715</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667111318715</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,14 +273,15 @@
     <MESSAGE value="concretecom" />
     <MESSAGE value="first hibernate tries" />
     <MESSAGE value="remove hibernate" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove hibernate" />
+    <MESSAGE value="custom orm" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom orm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java</url>
-          <line>140</line>
+          <line>139</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>

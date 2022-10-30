@@ -21,12 +21,14 @@ public class EntityManager<E> implements DbContext<E> {
     private final Connection connection;
     private final Class<E> clazz;
     private final String tableName;
+    private final List<String> tableFieldsWithoutId;
 
 
     public EntityManager(Connection connection, Class<E> clazz) {
         this.connection = connection;
         this.clazz = clazz;
         this.tableName = getTableName();
+        this.tableFieldsWithoutId = getColumnsWithoutId();
     }
 
     @Override
@@ -47,10 +49,10 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     private boolean doInsert(E entity, Field idColumn) throws SQLException, IllegalAccessException {
-        String tableFields = String.join(", ", getColumnsWithoutId());
-        String tableValues = String.join(", ", getValuesWithoutId(entity));
+        String tableFieldsStr = String.join(", ", tableFieldsWithoutId);
+        String tableValuesStr = String.join(", ", getValuesWithoutId(entity));
 //TODO: refactor with ??? in statement
-        String insertQuery = String.format("INSERT INTO %s (%s) VALUES (%s)", tableName, tableFields, tableValues);
+        String insertQuery = String.format("INSERT INTO %s (%s) VALUES (%s)", tableName, tableFieldsStr, tableValuesStr);
 
         return connection.prepareStatement(insertQuery).execute();
     }
@@ -116,7 +118,6 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     public E FindEntityInTable(E entity) throws IllegalAccessException, SQLException, NoSuchMethodException, InvocationTargetException, InstantiationException {
-        List<String> tableFields = getColumnsWithoutId();
         List<String> tableValues = getValuesWithoutId(entity);
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT * FROM ")
@@ -124,12 +125,12 @@ public class EntityManager<E> implements DbContext<E> {
                 .append(" ")
                 .append("WHERE");
 
-        for (int i = 0; i < tableFields.size(); i++) {
+        for (int i = 0; i < tableFieldsWithoutId.size(); i++) {
             sb.append(" ")
-                    .append(tableFields.get(i))
+                    .append(tableFieldsWithoutId.get(i))
                     .append(" = ")
                     .append(tableValues.get(i));
-            if (i < tableFields.size() - 1) {
+            if (i < tableFieldsWithoutId.size() - 1) {
                 sb.append(" AND");
             }
         }
