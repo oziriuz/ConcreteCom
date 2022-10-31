@@ -27,20 +27,23 @@ public class LoginController {
     private PasswordField passwordPasswordField;
 
     public void loginButtonOnClick() {
-        if (!usernameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
-            if (LoginValidation.isValidLogin(usernameTextField.getText(), passwordPasswordField.getText())) {
-                try {
-                    loadMainWindow();
-                    cancelButtonOnClick();
-                } catch (IOException e) {
-                    //TODO: proper exception handling
-                    e.printStackTrace();
-                }
-            } else {
-                loginMessageLabel.setText("Invalid login. Please try again.");
+        if (usernameTextField.getText().isBlank() || passwordPasswordField.getText().isBlank()) {
+            loginMessageLabel.setText("Please enter username and password.");
+            return;
+        }
+
+        String username = usernameTextField.getText();
+        String password = passwordPasswordField.getText();
+        if (LoginValidation.isValidLogin(username, password)) {
+            try {
+                loadMainWindow();
+                cancelButtonOnClick();
+            } catch (IOException e) {
+                //TODO: proper exception handling
+                e.printStackTrace();
             }
         } else {
-            loginMessageLabel.setText("Please enter username and password.");
+            loginMessageLabel.setText("Invalid login. Please try again.");
         }
     }
 
