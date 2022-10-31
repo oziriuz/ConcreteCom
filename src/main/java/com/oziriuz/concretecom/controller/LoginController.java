@@ -37,7 +37,7 @@ public class LoginController {
         if (LoginValidation.isValidLogin(username, password)) {
             try {
                 loadMainWindow();
-                cancelButtonOnClick();
+                this.close();
             } catch (IOException e) {
                 //TODO: proper exception handling
                 e.printStackTrace();
@@ -48,8 +48,7 @@ public class LoginController {
     }
 
     public void cancelButtonOnClick() {
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
+        this.close();
     }
 
     public void loadMainWindow() throws IOException {
@@ -59,5 +58,10 @@ public class LoginController {
         primaryStage.setTitle("ConcreteCom");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    private void close() {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
     }
 }

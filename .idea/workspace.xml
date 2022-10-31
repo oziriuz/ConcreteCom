@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="database creation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="login refactor">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +138,7 @@
       <workItem from="1666546680101" duration="6618000" />
       <workItem from="1666554781564" duration="39000" />
       <workItem from="1667046437183" duration="53630000" />
-      <workItem from="1667162515295" duration="2233000" />
+      <workItem from="1667162515295" duration="2639000" />
     </task>
     <task id="LOCAL-00001" summary="concretecom">
       <created>1647283680003</created>
@@ -302,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667162714861</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="login refactor">
+      <created>1667194716876</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1667194716876</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +331,7 @@
     <MESSAGE value="remove hibernate" />
     <MESSAGE value="custom orm" />
     <MESSAGE value="database creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="database creation" />
+    <MESSAGE value="login refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="login refactor" />
   </component>
 </project>
