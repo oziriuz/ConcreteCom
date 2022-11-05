@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Entity("settings_bc1")
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
-public class MachineSettings1 {
+public class MachineSettings {
     @Id
     @Column("ind")
     private long id;

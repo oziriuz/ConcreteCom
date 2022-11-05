@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity("tempmix_bc1")
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
-public class TempMix1 {
+public class TempMix {
     @Id
     @Column("mix_id")
     private long id;
