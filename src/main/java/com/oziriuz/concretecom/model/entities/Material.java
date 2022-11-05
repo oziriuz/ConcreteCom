@@ -1,9 +1,14 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
-@Entity("materials_bc2")
-public class Materials2 {
+@Entity("materials_bc1")
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
+public class Material {
     @Id
     @Column("m_num")
     private long id;
@@ -26,16 +31,4 @@ public class Materials2 {
 
     @Column("m_humidity")
     private String humidity;
-
-    public Materials2() {
-    }
-
-    public Materials2(String name, String type, String loaded, String delivered, String sold, String humidity) {
-        this.name = name;
-        this.type = type;
-        this.loaded = loaded;
-        this.delivered = delivered;
-        this.sold = sold;
-        this.humidity = humidity;
-    }
 }

@@ -1,11 +1,16 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Entity("daily_expenses")
-public class DailyExpenses {
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
+public class DailyExpense {
     @Id
     @Column("row_num")
     private long id;
@@ -20,15 +25,5 @@ public class DailyExpenses {
     private String dateSold;
 
     @Column("stamp_date")
-    private LocalDate dateStamp = LocalDate.now();
-
-    public DailyExpenses() {
-    }
-
-    public DailyExpenses(String name, String sold, String dateSold, LocalDate dateStamp) {
-        this.name = name;
-        this.sold = sold;
-        this.dateSold = dateSold;
-        this.dateStamp = dateStamp;
-    }
+    private LocalDate dateStamp;
 }

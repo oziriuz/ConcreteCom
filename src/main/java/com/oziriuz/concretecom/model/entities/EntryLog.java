@@ -1,14 +1,19 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Entity("entry_log")
-public class EntryLog1 {
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
+public class EntryLog {
     @Id
     @Column("log_num")
-    private long id;
+    protected long id;
 
     @Column("log_name")
     private String name;
@@ -24,15 +29,4 @@ public class EntryLog1 {
 
     @Column("log_exit")
     private String dateExitStr;
-
-    public EntryLog1() {
-    }
-
-    public EntryLog1(String name, LocalDate dateEnter, String dateEnterStr, LocalDate dateExit, String dateExitStr) {
-        this.name = name;
-        this.dateEnter = dateEnter;
-        this.dateEnterStr = dateEnterStr;
-        this.dateExit = dateExit;
-        this.dateExitStr = dateExitStr;
-    }
 }

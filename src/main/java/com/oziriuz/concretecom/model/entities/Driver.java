@@ -1,8 +1,13 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity("drivers")
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Driver {
     @Id
     @Column("d_num")
@@ -28,16 +33,4 @@ public class Driver {
 
     @Column("d_show")
     boolean isVisible = true;
-
-    public Driver() {
-    }
-
-    public Driver(String name, String capacityVehicle, String modelVehicle, String phone, String note, boolean isVisible) {
-        this.name = name;
-        this.capacityVehicle = capacityVehicle;
-        this.modelVehicle = modelVehicle;
-        this.phone = phone;
-        this.note = note;
-        this.isVisible = isVisible;
-    }
 }

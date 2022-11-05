@@ -1,8 +1,13 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity("suppliers")
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Supplier{
     @Id
     @Column("s_num")
@@ -24,18 +29,9 @@ public class Supplier{
     @Column("s_tel")
     String phone;
 
+    @Column("s_note")
+    String note;
+
     @Column("s_show")
     boolean isVisible = true;
-
-    public Supplier() {
-    }
-
-    public Supplier(String name, String VATNumber, String accountablePerson, String address, String phone, boolean isVisible) {
-        this.name = name;
-        this.VATNumber = VATNumber;
-        this.accountablePerson = accountablePerson;
-        this.address = address;
-        this.phone = phone;
-        this.isVisible = isVisible;
-    }
 }

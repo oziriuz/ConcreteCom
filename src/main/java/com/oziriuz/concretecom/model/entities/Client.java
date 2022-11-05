@@ -1,8 +1,13 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity("clients")
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Client{
     @Id
     @Column("c_num")
@@ -26,16 +31,4 @@ public class Client{
 
     @Column("c_show")
     boolean isVisible = true;
-
-    public Client() {
-    }
-
-    public Client(String name, String VATNumber, String accountablePerson, String address, String phone, boolean isVisible) {
-        this.name = name;
-        this.VATNumber = VATNumber;
-        this.accountablePerson = accountablePerson;
-        this.address = address;
-        this.phone = phone;
-        this.isVisible = isVisible;
-    }
 }

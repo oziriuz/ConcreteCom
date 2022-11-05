@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 public class EntityManager<E> implements DbContext<E> {
     private final Connection connection;
     private final Class<E> clazz;
+    private final Class<E> superClazz;
     private final String tableName;
     private final String idColumn;
     List<String> uniques;
@@ -23,10 +24,20 @@ public class EntityManager<E> implements DbContext<E> {
     public EntityManager(Connection connection, Class<E> clazz) {
         this.connection = connection;
         this.clazz = clazz;
+        this.superClazz = getSuperClazz(clazz);
         this.tableName = getTableName();
         this.idColumn = getEntityIdColumnName();
         this.uniques = getEntityUniqueColumns();
         this.tableFieldsWithoutId = getEntityColumnsWithoutId();
+    }
+
+    private Class<E> getSuperClazz(Class<E> clazz) {
+        Class<E> superClazz = (Class<E>) clazz.getSuperclass();
+        if (superClazz != Object.class) {
+            return superClazz;
+        }
+
+        return clazz;
     }
 
     @Override
@@ -84,7 +95,7 @@ public class EntityManager<E> implements DbContext<E> {
         ResultSet rs = statement.executeQuery();
 
         if (rs.next()) {
-            E resultEntity = clazz.getDeclaredConstructor().newInstance();
+            E resultEntity = superClazz.getDeclaredConstructor().newInstance();
             fillEntity(rs, resultEntity);
             return resultEntity;
         }
@@ -129,7 +140,7 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     private String getEntityIdColumnName() {
-        List<String> columns = Arrays.stream(clazz.getDeclaredFields())
+        List<String> columns = Arrays.stream(superClazz.getDeclaredFields())
                 .filter(f -> f.isAnnotationPresent(Column.class))
                 .filter(f -> f.isAnnotationPresent(Id.class))
                 .map(f -> f.getAnnotationsByType(Column.class))
@@ -144,7 +155,7 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     private Field getEntityIdColumnField() {
-        Field[] declaredFields = clazz.getDeclaredFields();
+        Field[] declaredFields = superClazz.getDeclaredFields();
         for (Field declaredField : declaredFields) {
             boolean annotationPresent = declaredField.isAnnotationPresent(Id.class);
 
@@ -157,7 +168,7 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     private List<String> getEntityUniqueColumns() {
-        List<String> columns = Arrays.stream(clazz.getDeclaredFields())
+        List<String> columns = Arrays.stream(superClazz.getDeclaredFields())
                 .filter(f -> f.isAnnotationPresent(Column.class))
                 .filter(f -> f.isAnnotationPresent(Unique.class))
                 .map(f -> f.getAnnotationsByType(Column.class))
@@ -172,7 +183,7 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     private List<String> getEntityColumnsWithoutId() {
-        return Arrays.stream(clazz.getDeclaredFields())
+        return Arrays.stream(superClazz.getDeclaredFields())
                 .filter(f -> !f.isAnnotationPresent(Id.class))
                 .filter((f -> f.isAnnotationPresent(Column.class)))
                 .map(f -> f.getAnnotationsByType(Column.class))
@@ -279,7 +290,7 @@ public class EntityManager<E> implements DbContext<E> {
 
         List<E> result = new ArrayList<>();
         while (resultSet.next()) {
-            E entity = clazz.getDeclaredConstructor().newInstance();
+            E entity = superClazz.getDeclaredConstructor().newInstance();
             fillEntity(resultSet, entity);
 
             result.add(entity);
@@ -328,7 +339,7 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     private List<String> getEntityValuesWithoutId(E entity) throws IllegalAccessException {
-        List<Field> fields = Arrays.stream(clazz.getDeclaredFields())
+        List<Field> fields = Arrays.stream(superClazz.getDeclaredFields())
                 .filter(f -> !f.isAnnotationPresent(Id.class))
                 .filter((f -> f.isAnnotationPresent(Column.class)))
                 .collect(Collectors.toList());
@@ -367,7 +378,7 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     private List<Field> getEntityFieldsWithoutId() {
-        return Arrays.stream(clazz.getDeclaredFields())
+        return Arrays.stream(superClazz.getDeclaredFields())
                 .filter(f -> !f.isAnnotationPresent(Id.class))
                 .filter(f -> f.isAnnotationPresent(Column.class))
                 .collect(Collectors.toList());
@@ -375,7 +386,7 @@ public class EntityManager<E> implements DbContext<E> {
 
     private void fillEntity(ResultSet resultSet, E entity)
             throws SQLException, IllegalAccessException {
-        Field[] declaredFields = clazz.getDeclaredFields();
+        Field[] declaredFields = superClazz.getDeclaredFields();
 
         for (Field declaredField : declaredFields) {
             declaredField.setAccessible(true);
@@ -410,7 +421,11 @@ public class EntityManager<E> implements DbContext<E> {
         } else if (type == String.class) {
             sqlType = "text";
         } else if (type == LocalDate.class) {
-            sqlType = "text";
+            sqlType = "date";
+        } else if (type == boolean.class) {
+            sqlType = "boolean";
+        } else if (type == long.class) {
+            sqlType = "bigint";
         }
 
         return sqlType;

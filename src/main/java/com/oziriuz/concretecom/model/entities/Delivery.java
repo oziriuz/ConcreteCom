@@ -1,10 +1,15 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Entity("deliveries")
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Delivery {
     @Id
     @Column("del_num")
@@ -29,28 +34,11 @@ public class Delivery {
     private String date;
 
     @Column("stamp_date")
-    private LocalDate dateStamp = LocalDate.now();
+    private LocalDate dateStamp;
 
     @Column("del_q")
     private String quantity;
 
     @Column("del_op")
     private String operator;
-
-    public Delivery() {
-    }
-
-    public Delivery(String material, String supplierName, String supplierVATNumber,
-                    String documentType, String documentNumber, String date,
-                    LocalDate dateStamp, String quantity, String operator) {
-        this.material = material;
-        this.supplierName = supplierName;
-        this.supplierVATNumber = supplierVATNumber;
-        this.documentType = documentType;
-        this.documentNumber = documentNumber;
-        this.date = date;
-        this.dateStamp = dateStamp;
-        this.quantity = quantity;
-        this.operator = operator;
-    }
 }

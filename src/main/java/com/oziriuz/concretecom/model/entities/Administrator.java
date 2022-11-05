@@ -1,8 +1,13 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity("admin_data")
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Administrator{
     @Id
     @Column("a_num" )
@@ -14,12 +19,4 @@ public class Administrator{
 
     @Column("a_pass")
     private String password;
-
-    public Administrator() {
-    }
-
-    public Administrator(String name, String password) {
-        this.name = name;
-        this.password = password;
-    }
 }

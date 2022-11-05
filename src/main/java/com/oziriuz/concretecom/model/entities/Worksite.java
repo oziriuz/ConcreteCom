@@ -1,8 +1,13 @@
 package com.oziriuz.concretecom.model.entities;
 
 import com.oziriuz.concretecom.model.annotations.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity("worksites")
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Worksite {
     @Id
     @Column("w_num")
@@ -19,14 +24,4 @@ public class Worksite {
 
     @Column("w_show")
     private boolean isVisible = true;
-
-    public Worksite() {
-    }
-
-    public Worksite(long clientId, String name, String distance, boolean isVisible) {
-        this.clientId = clientId;
-        this.name = name;
-        this.distance = distance;
-        this.isVisible = isVisible;
-    }
 }

@@ -5,7 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="login refactor">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Material2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/MixResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/MixResult2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/OtherExpense.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/Entities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcreteCom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ConcreteCom.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/DailyExpenses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/DailyExpense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/EntryLog1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/EntryLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/EntryLog2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/EntryLog2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Materials1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Materials2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/MixResults1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/MixResults2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Worksite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Worksite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +45,8 @@
       <list>
         <option value="package-info" />
         <option value="FxmlFile" />
-        <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -138,7 +166,7 @@
       <workItem from="1666546680101" duration="6618000" />
       <workItem from="1666554781564" duration="39000" />
       <workItem from="1667046437183" duration="53630000" />
-      <workItem from="1667162515295" duration="2639000" />
+      <workItem from="1667162515295" duration="19505000" />
     </task>
     <task id="LOCAL-00001" summary="concretecom">
       <created>1647283680003</created>
@@ -308,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667194716876</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="login refactor">
+      <created>1667195047420</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1667195047420</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,5 +368,16 @@
     <MESSAGE value="database creation" />
     <MESSAGE value="login refactor" />
     <option name="LAST_COMMIT_MESSAGE" value="login refactor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
