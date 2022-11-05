@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="added lombok and reflection for entities creation in table">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/MachineSettings1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/MachineSettings2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Recipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Revision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/SoftwareSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/TempMix1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/TempMix2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseConnection.java" afterDir="false" />
+    <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="reflection for entities creation in tables">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +138,7 @@
       <workItem from="1666546680101" duration="6618000" />
       <workItem from="1666554781564" duration="39000" />
       <workItem from="1667046437183" duration="53630000" />
-      <workItem from="1667162515295" duration="24735000" />
+      <workItem from="1667162515295" duration="26742000" />
     </task>
     <task id="LOCAL-00001" summary="concretecom">
       <created>1647283680003</created>
@@ -330,7 +322,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667647034075</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="reflection for entities creation in tables">
+      <created>1667663834763</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1667663834763</updated>
+    </task>
+    <task id="LOCAL-00028" summary="reflection for entities creation in tables">
+      <created>1667664377283</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667664377283</updated>
+    </task>
+    <task id="LOCAL-00029" summary="reflection for entities creation in tables">
+      <created>1667665201115</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1667665201115</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +368,18 @@
     <MESSAGE value="database creation" />
     <MESSAGE value="login refactor" />
     <MESSAGE value="added lombok and reflection for entities creation in table" />
-    <option name="LAST_COMMIT_MESSAGE" value="added lombok and reflection for entities creation in table" />
+    <MESSAGE value="reflection for entities creation in tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflection for entities creation in tables" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

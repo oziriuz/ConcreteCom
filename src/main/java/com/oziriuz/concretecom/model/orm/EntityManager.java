@@ -31,15 +31,6 @@ public class EntityManager<E> implements DbContext<E> {
         this.tableFieldsWithoutId = getEntityColumnsWithoutId();
     }
 
-    private Class<E> getSuperClazz(Class<E> clazz) {
-        Class<E> superClazz = (Class<E>) clazz.getSuperclass();
-        if (superClazz != Object.class) {
-            return superClazz;
-        }
-
-        return clazz;
-    }
-
     @Override
     public void ensureTable() throws SQLException {
         if (hasTable()) {
@@ -129,6 +120,16 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     //region helpers
+
+    private Class<E> getSuperClazz(Class<E> clazz) {
+        Class<E> superClazz = (Class<E>) clazz.getSuperclass();
+        if (superClazz != Object.class) {
+            return superClazz;
+        }
+
+        return clazz;
+    }
+
     private String getTableName() {
         Entity[] annotationsByType = clazz.getAnnotationsByType(Entity.class);
 

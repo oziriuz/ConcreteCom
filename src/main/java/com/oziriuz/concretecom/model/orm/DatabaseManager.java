@@ -42,6 +42,7 @@ public class DatabaseManager {
                     + className.substring(0, className.lastIndexOf('.')));
         } catch (ClassNotFoundException e) {
             //TODO: handle the exception
+            e.printStackTrace();
         }
         return null;
     }
