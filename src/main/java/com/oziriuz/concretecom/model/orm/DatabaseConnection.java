@@ -1,6 +1,5 @@
 package com.oziriuz.concretecom.model.orm;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
