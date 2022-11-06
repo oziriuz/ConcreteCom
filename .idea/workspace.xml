@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="reflection for entities creation in tables">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/RecipeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/recipe-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/LoginValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/LoginValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DbContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DbContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +47,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -56,12 +68,13 @@
   &quot;keyToString&quot;: {
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Downloads/Statistic-4.2.6.jar&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Documents/ConcreteCom/src/main/resources/com/oziriuz/concretecom&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
@@ -73,6 +86,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.oziriuz.concretecom.model." />
       <recent name="com.oziriuz.concretecom.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\ConcreteCom\src\main\resources\com\oziriuz\concretecom" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.oziriuz.concretecom.model.LoginValidation" />
@@ -138,7 +154,15 @@
       <workItem from="1666546680101" duration="6618000" />
       <workItem from="1666554781564" duration="39000" />
       <workItem from="1667046437183" duration="53630000" />
-      <workItem from="1667162515295" duration="26742000" />
+      <workItem from="1667162515295" duration="30819000" />
+      <workItem from="1667722651824" duration="309000" />
+      <workItem from="1667723453189" duration="1852000" />
+      <workItem from="1667727045120" duration="1229000" />
+      <workItem from="1667728305949" duration="5447000" />
+      <workItem from="1667740437726" duration="1597000" />
+      <workItem from="1667744520526" duration="3273000" />
+      <workItem from="1667748117535" duration="29000" />
+      <workItem from="1667761109488" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="concretecom">
       <created>1647283680003</created>
@@ -343,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667665201115</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="reflection for entities creation in tables">
+      <created>1667665907520</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1667665907520</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,16 +401,5 @@
     <MESSAGE value="added lombok and reflection for entities creation in table" />
     <MESSAGE value="reflection for entities creation in tables" />
     <option name="LAST_COMMIT_MESSAGE" value="reflection for entities creation in tables" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -8,7 +8,7 @@ public interface DbContext<E> {
 
     boolean saveEntity(E entity) throws IllegalAccessException, SQLException;
 
-    E FindOneEntity(E entity)
+    E FindOneEntity(E entity, long...id)
             throws IllegalAccessException, SQLException, NoSuchMethodException,
             InvocationTargetException, InstantiationException;
 

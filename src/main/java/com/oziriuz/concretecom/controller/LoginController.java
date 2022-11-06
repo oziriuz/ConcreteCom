@@ -22,19 +22,20 @@ public class LoginController {
     @FXML
     private Label loginMessageLabel;
     @FXML
-    private TextField usernameTextField;
+    private TextField idTextField;
     @FXML
     private PasswordField passwordPasswordField;
 
     public void loginButtonOnClick() {
-        if (usernameTextField.getText().isBlank() || passwordPasswordField.getText().isBlank()) {
-            loginMessageLabel.setText("Please enter username and password.");
+        if (idTextField.getText().isBlank() || passwordPasswordField.getText().isBlank()) {
+            loginMessageLabel.setText("Please enter ID and password.");
             return;
         }
 
-        String username = usernameTextField.getText();
+        long id = Long.parseLong(idTextField.getText());
         String password = passwordPasswordField.getText();
-        if (LoginValidation.isValidLogin(username, password)) {
+
+        if (LoginValidation.isValidLogin(id, password)) {
             try {
                 loadMainWindow();
                 this.close();

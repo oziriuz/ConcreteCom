@@ -8,13 +8,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 
 public class LoginValidation {
-    public static boolean isValidLogin(String username, String password) {
+    public static boolean isValidLogin(long id, String password) {
         //TODO: password must be encoded
         try {
             Connection connection = DatabaseConnection.getConnection();
             EntityManager<Operator> operatorEntityManager = new EntityManager<>(connection, Operator.class);
-            Operator operator = new Operator(username, password);
-            Operator toLogIn = operatorEntityManager.FindOneEntity(operator);
+            Operator operator = new Operator(id, password);
+            Operator toLogIn = operatorEntityManager.FindOneEntity(operator, id);
 
             if (toLogIn != null) {
                 connection.close();

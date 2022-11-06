@@ -54,27 +54,39 @@ public class EntityManager<E> implements DbContext<E> {
     }
 
     @Override
-    public E FindOneEntity(E entity)
+    public E FindOneEntity(E entity, long...id)
             throws IllegalAccessException, SQLException, NoSuchMethodException,
             InvocationTargetException, InstantiationException {
+
         List<String> tableValues = getEntityValuesWithoutId(entity);
         StringBuilder sb = new StringBuilder("SELECT * FROM ");
         sb.append(tableName)
                 .append(" ")
                 .append("WHERE");
 
-        for (int i = 0; i < tableFieldsWithoutId.size(); i++) {
+        //when id is present - search it
+        if (id[0] != 0) {
             sb.append(" ")
-                    .append(tableFieldsWithoutId.get(i));
+                    .append(idColumn)
+                    .append(" = ")
+                    .append(id[0])
+                    .append(" AND");
+        }
 
-            if (tableValues.get(i) == null) {
-                sb.append(" is ");
+        //this counter omits the null values to be searched in sql
+        int nullValueCounter = 0;
+
+        for (int i = 0; i < tableFieldsWithoutId.size(); i++) {
+            if (tableValues.get(i) != null) {
+                sb.append(" ")
+                        .append(tableFieldsWithoutId.get(i))
+                        .append(" = ")
+                        .append(tableValues.get(i));
             } else {
-                sb.append(" = ");
+                nullValueCounter++;
             }
 
-            sb.append(tableValues.get(i));
-            if (i < tableFieldsWithoutId.size() - 1) {
+            if (i < tableFieldsWithoutId.size() - 1 - nullValueCounter) {
                 sb.append(" AND");
             }
         }
@@ -358,7 +370,6 @@ public class EntityManager<E> implements DbContext<E> {
                 values.add(o.toString());
             }
         }
-
 
         return values;
     }

@@ -20,8 +20,8 @@ public class Operator{
     @Column("o_pass")
     private String password;
 
-    public Operator(String name, String password) {
-        this.name = name;
+    public Operator(long id, String password) {
+        this.id = id;
         this.password = password;
     }
 }

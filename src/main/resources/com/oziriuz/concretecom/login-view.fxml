@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" stylesheets="@dark-theme.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oziriuz.concretecom.controller.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" stylesheets="@dark-theme.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oziriuz.concretecom.controller.LoginController">
    <left>
       <AnchorPane prefHeight="350.0" prefWidth="230.0" BorderPane.alignment="CENTER">
          <children>
@@ -35,8 +35,8 @@
                </effect>
             </Label>
             <Line endX="100.0" layoutX="116.5" layoutY="87.0" startX="-100.0" stroke="DODGERBLUE" strokeWidth="3.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.599999999999994" />
-            <CubicCurve controlX1="-120.00001525878906" controlX2="-2.0000152587890625" controlY1="-112.5999984741211" controlY2="129.4000244140625" endX="90.79997253417969" endY="-47.79998779296875" fill="DODGERBLUE" layoutX="120.0" layoutY="221.0" startX="-110.00001525878906" startY="117.79998779296875" stroke="BLACK" />
-            <Line endX="101.97483825683594" endY="102.79998779296875" layoutX="110.0" layoutY="188.0" startX="-79.20002746582031" startY="4.399993896484375" />
+            <CubicCurve controlX1="-120.0" controlX2="-2.0" controlY1="-112.6" controlY2="129.4" endX="90.8" endY="-47.8" fill="DODGERBLUE" layoutX="120.0" layoutY="221.0" startX="-110.0" startY="117.8" stroke="BLACK" />
+            <Line endX="101.9" endY="102.8" layoutX="110.0" layoutY="188.0" startX="-79.2" startY="4.4" />
          </children>
       </AnchorPane>
    </left>
@@ -51,7 +51,7 @@
                   <Reflection />
                </effect>
             </Label>
-            <Label layoutX="45.0" layoutY="104.0" text="Username">
+            <Label layoutX="32.0" layoutY="104.0" text="Operator ID">
                <font>
                   <Font size="14.0" />
                </font>
@@ -61,7 +61,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="usernameTextField" layoutX="126.0" layoutY="101.0" promptText="username" />
+            <TextField fx:id="idTextField" layoutX="126.0" layoutY="101.0" promptText="operator id" />
             <PasswordField fx:id="passwordPasswordField" layoutX="126.0" layoutY="147.0" promptText="password" />
             <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="52.0" layoutY="220.0" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: grey;" text="Login" textFill="WHITE">
                <effect>
