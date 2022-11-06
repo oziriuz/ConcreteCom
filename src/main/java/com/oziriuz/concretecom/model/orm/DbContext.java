@@ -16,7 +16,4 @@ public interface DbContext<E> {
 
     Iterable<E> find(String where);
 
-    E findFirst() throws SQLException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException;
-
-    E findFirst(String where) throws SQLException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException;
 }

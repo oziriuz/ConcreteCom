@@ -116,21 +116,6 @@ public class EntityManager<E> implements DbContext<E> {
         return null;
     }
 
-    @Override
-    public E findFirst()
-            throws SQLException, InvocationTargetException, InstantiationException,
-            IllegalAccessException, NoSuchMethodException {
-        return findFirst(null);
-    }
-
-    @Override
-    public E findFirst(String where)
-            throws SQLException, InvocationTargetException, InstantiationException,
-            IllegalAccessException, NoSuchMethodException {
-        List<E> result = baseFind(where, "LIMIT 1");
-        return result.get(0);
-    }
-
     //region helpers
 
     private Class<E> getSuperClazz(Class<E> clazz) {
