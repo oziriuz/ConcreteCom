@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @Entity("oper_data")
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
-public class Operator{
+public class Operator {
     @Id
-    @Column("o_num" )
+    @Column("o_num")
     private long id;
 
     @Unique

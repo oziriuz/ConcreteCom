@@ -12,35 +12,32 @@ import java.util.ResourceBundle;
 public class LauncherPreloaderController implements Initializable {
 
     public Label lblLoading;
-    public static Label lblLoadingg;
+    public static Label lblLoading0;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        lblLoadingg = lblLoading;
+        lblLoading0 = lblLoading;
     }
 
     public void checkSuccessfulStart() {
         final String[] message = new String[5];
         message[0] = "Verification ... Ensuring Database";
         message[1] = "Second function";
-        int threadCounter;
-        //TODO: this all must be in the model or not??
+
         //TODO: initialize OPC connection
 
         Thread t1 = new Thread(() -> {
-            Platform.runLater(() -> lblLoadingg.setText(message[0]));
+            Platform.runLater(() -> lblLoading0.setText(message[0]));
             try {
                 DatabaseManager.ensureDatabase();
                 Thread.sleep(333);
-            } catch (InterruptedException e) {
+            } catch (InterruptedException | SQLException e) {
                 e.printStackTrace();
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
             }
         });
 
         Thread t2 = new Thread(() -> {
-            Platform.runLater(() -> lblLoadingg.setText(message[1]));
+            Platform.runLater(() -> lblLoading0.setText(message[1]));
             try {
                 Thread.sleep(333);
             } catch (InterruptedException e) {

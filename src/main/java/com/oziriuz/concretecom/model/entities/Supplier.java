@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Entity("suppliers")
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
-public class Supplier{
+public class Supplier {
     @Id
     @Column("s_num")
     private long id;

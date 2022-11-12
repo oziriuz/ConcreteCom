@@ -142,8 +142,7 @@ public class EntityManager<E> implements DbContext<E> {
                 .filter(f -> f.isAnnotationPresent(Column.class))
                 .filter(f -> f.isAnnotationPresent(Id.class))
                 .map(f -> f.getAnnotationsByType(Column.class))
-                .map(a -> a[0].value())
-                .collect(Collectors.toList());
+                .map(a -> a[0].value()).toList();
 
         if (columns.size() > 0) {
             return columns.get(0);
@@ -239,7 +238,8 @@ public class EntityManager<E> implements DbContext<E> {
         String tableFieldsStr = String.join(", ", tableFieldsWithoutId);
         String tableValuesStr = String.join(", ", getEntityValuesWithoutId(entity));
 
-        StringBuilder sb = new StringBuilder("INSERT INTO ");
+        StringBuilder sb;
+        sb = new StringBuilder("INSERT INTO ");
         sb.append(tableName)
                 .append(" (")
                 .append(tableFieldsStr)
@@ -261,7 +261,8 @@ public class EntityManager<E> implements DbContext<E> {
             setStatements.add(statement);
         }
         String statementStr = String.join(",", setStatements);
-        StringBuilder sb = new StringBuilder("UPDATE ");
+        StringBuilder sb;
+        sb = new StringBuilder("UPDATE ");
         sb.append(tableName)
                 .append(" SET ")
                 .append(statementStr)
@@ -339,8 +340,7 @@ public class EntityManager<E> implements DbContext<E> {
     private List<String> getEntityValuesWithoutId(E entity) throws IllegalAccessException {
         List<Field> fields = Arrays.stream(superClazz.getDeclaredFields())
                 .filter(f -> !f.isAnnotationPresent(Id.class))
-                .filter((f -> f.isAnnotationPresent(Column.class)))
-                .collect(Collectors.toList());
+                .filter((f -> f.isAnnotationPresent(Column.class))).toList();
 
         List<String> values = new ArrayList<>();
         for (Field field : fields) {

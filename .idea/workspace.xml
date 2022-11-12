@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="reflection for entities creation in tables">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/RecipeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/recipe-view.fxml" afterDir="false" />
+    <list default="true" id="93396121-7544-4405-97b7-e3e6242311d5" name="Changes" comment="omit nulls in sql select">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/ModelConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LauncherPreloaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/controller/LauncherPreloaderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/LoginValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/LoginValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Operator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DbContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DbContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/entities/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oziriuz/concretecom/model/orm/EntityManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/login-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/oziriuz/concretecom/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

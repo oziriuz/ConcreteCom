@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @Entity("admin_data")
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
-public class Administrator{
+public class Administrator {
     @Id
-    @Column("a_num" )
+    @Column("a_num")
     private long id;
 
     @Unique

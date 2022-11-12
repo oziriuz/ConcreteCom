@@ -1,5 +1,7 @@
 package com.oziriuz.concretecom.model.orm;
 
+import com.oziriuz.concretecom.model.ModelConstants;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -10,36 +12,46 @@ import java.util.stream.Collectors;
 
 public class DatabaseManager {
 
-    private static final String PACKAGE_NAME = "com.oziriuz.concretecom.model.entities";
+    private static final String packageName = ModelConstants.PATH_TO_ENTITIES;
 
     public static void ensureDatabase() throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
 
-        Set<Class> entitiesList = findAllClassesInPackage();
+        Set<Class> classSet = getAllClassesFromPackage();
 
-        for (Class entity : entitiesList) {
-            EntityManager<Class> entityManager = new EntityManager<Class>(connection, entity);
-            entityManager.ensureTable();
+        for (Class entity : classSet) {
+            DbContext<Class> context = new EntityManager<Class>(connection, entity);
+            context.ensureTable();
         }
 
-        //Do not close connection!
+        connection.close();
     }
 
-    private static Set<Class> findAllClassesInPackage() {
+    private static Set<Class> getAllClassesFromPackage() {
         InputStream stream = ClassLoader.getSystemClassLoader()
-                .getResourceAsStream(PACKAGE_NAME.replaceAll("[.]", "/"));
+                .getResourceAsStream(packageName.replaceAll("[.]", "/"));
+
         assert stream != null;
         BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
         return reader.lines()
                 .filter(line -> line.endsWith(".class"))
+                .map(DatabaseManager::removeExtension)
+                .map(DatabaseManager::addPath)
                 .map(DatabaseManager::getClass)
                 .collect(Collectors.toSet());
     }
 
+    private static String addPath(String className) {
+        return packageName + "." + className;
+    }
+
+    private static String removeExtension(String className) {
+        return className.substring(0, className.lastIndexOf('.'));
+    }
+
     private static Class getClass(String className) {
         try {
-            return Class.forName(PACKAGE_NAME + "."
-                    + className.substring(0, className.lastIndexOf('.')));
+            return Class.forName(className);
         } catch (ClassNotFoundException e) {
             //TODO: handle the exception
             e.printStackTrace();

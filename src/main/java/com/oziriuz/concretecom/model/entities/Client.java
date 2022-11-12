@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Entity("clients")
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
-public class Client{
+public class Client {
     @Id
     @Column("c_num")
     private long id;
